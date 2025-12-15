@@ -18,6 +18,14 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
+#----------------------- PAGE CONFIG (MUST BE FIRST!) ----------------------
+st.set_page_config(
+    page_title="Chicillo - Eco Assistant", 
+    page_icon="♻️",
+    layout='wide',
+    initial_sidebar_state="expanded"
+)
+
 #----------------------- CONFIGURATION ----------------------
 CHROMA_PATH = "chroma1.0"
 MODEL_NAME = "sentence-transformers/all-mpnet-base-v2"
@@ -310,13 +318,6 @@ def chicillo_page():
 
 # Main application
 def main():
-    st.set_page_config(
-        page_title="Chicillo - Eco Assistant", 
-        page_icon="♻️",
-        layout='wide',
-        initial_sidebar_state="expanded"
-    )
-    
     st.markdown("""
         <style>
         .stButton>button {
